@@ -1,0 +1,23 @@
+{
+  "name": "ecomerce",
+  "version": "0.0.1",
+  "description": "ecomerce para front end mentor io",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GastonSKL/E-commerce-product-page-Front-End-Mentor-Challenge.git"
+  },
+  "keywords": [
+    "mi",
+    "paquete"
+  ],
+  "author": " <gastonlskamlec@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GastonSKL/E-commerce-product-page-Front-End-Mentor-Challenge/issues"
+  },
+  "homepage": "https://github.com/GastonSKL/E-commerce-product-page-Front-End-Mentor-Challenge#readme"
+}
