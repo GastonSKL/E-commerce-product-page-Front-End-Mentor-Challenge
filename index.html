@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/62c7e0a3f7.js" crossorigin="anonymous"></script>
   <title>Frontend Mentor | E-commerce product page</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
@@ -16,29 +16,129 @@
 </head>
 <body>
 
-  Collections
-  Men
-  Women
-  About
-  Contact
+  <main class="main-container">
 
-  Sneaker Company
+    <!--HEADER -->
+    <header>
+      <img src="./images/icon-menu.svg" alt="menu">
+      <img src="./images/logo.svg" alt="Logo">
+       
+      <!--NAVBAR -->
+      <nav class="navbar">
+        <ul class="navbar__items">
+          <li><a class="navbar__link" href="#">Collections</a></li>
+          <li><a class="navbar__link" href="#">Men</a></li>
+          <li><a class="navbar__link" href="#">Women</a></li>
+          <li><a class="navbar__link" href="#">About</a></li>
+          <li><a class="navbar__link" href="#">Contact</a></li>
+        </ul>
+      </nav>
+      
+      <!--MODAL NAVBAR-->
+      <div class="modal-navbar__background">
+        <nav class="modal-navbar">
+          <img class="modal-close" src="./images/icon-close.svg" alt="Close">
+          <ul class="navbar__items">
+            <li><a class="modal-navbar__link" href="#">Collections</a></li>
+            <li><a class="modal-navbar__link" href="#">Men</a></li>
+            <li><a class="modal-navbar__link" href="#">Women</a></li>
+            <li><a class="modal-navbar__link" href="#">About</a></li>
+            <li><a class="modal-navbar__link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
 
-  Fall Limited Edition Sneakers
+      <!--CARRITO Y PROFILE PICTURE-->
+      <div class="header__cart-avatar">
+        <div class="header__cart">
+          <div class="header__cart--notification">3</div>
+          <img src="./images/icon-cart.svg" alt="carrito">
+        </div>
+        <img src="./images/image-avatar.png" alt="perfil">
+      </div>
 
-  These low-profile sneakers are your perfect casual wear companion. Featuring a 
-  durable rubber outer sole, they’ll withstand everything the weather can offer.
+    </header>  
 
-  $125.00
-  50%
-  $250.00
+      <!--CONTENIDO(GALERIA Y DETALLES)-->
+      <section class="content">
 
-  0
-  Add to cart
-  
+        <!--GALERIA-->
+        <article class="gallery">
+          <div class="gallery__image-container">
+            <img class="gallery__previus" src="./images/icon-previous.svg" alt="Anterior">
+            <img class="next" src="./images/icon-next.svg" alt="Siguiente">
+          </div>
+          <div class="galley_thumnails">
+            <img id="1" class="galley_thumnail" src="./images/image-product-1-thumbnail.jpg" alt="preview 1">
+            <img id="2" class="galley_thumnail" src="./images/image-product-2-thumbnail.jpg" alt="preview 1">
+            <img id="3" class="galley_thumnail" src="./images/image-product-3-thumbnail.jpg" alt="preview 1">
+            <img id="4" class="galley_thumnail" src="./images/image-product-4-thumbnail.jpg" alt="preview 1">            
+          </div>
+        </article>
+
+        <!--DETALLES-->
+        <article class="details">
+          <h2 class="details__company">Sneaker Company</h2>
+          <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+          <p class="details__decription">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+          <div class="details__prices">
+            <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+            <p class="details__before">$250.00</p>
+          </div>
+          <div class="details__product-quantity">
+            <div class="input">
+              <img class="input__minus"src="./images/icon-minus.svg" alt="Menos">
+              <input class="input__number" type="number" value="0">
+              <img class="input__plus"src="./images/icon-plus.svg" alt="Plus">
+            </div>
+            <button class="details__button"><img src="./images/icon-cart.svg" alt="Carrito">Add to cart</button>
+
+
+          </div>
+
+        </article>
+
+      </section>
+
+      <!--MODAL DE CARRITO-->
+      <div class="cart-modal">
+        <p class="cart-modal__title">Cart</p>
+        <div class="cart-modal__checkout-container">
+          <div class="cart-modal__details-container">
+            <img src="./images/image-product-1-thumbnail.jpg" alt="preview">
+            <div>
+              <p class="cart-modal__product">Autumn Limited Edition..</p>
+              <p class="cart-modal__price">$125 x3 <span>$375.00</span></p>
+            </div>
+            <img class="cart-modal__delete" src="./images/icon-delete.svg" alt="Basura">
+          </div>
+          <button class="cart-modal__delete">Checkout</button>
+        </div>
+      </div>
+
+      <!--MODAL DE GALERIA-->
+      <div class="modal-gallery__background">
+        <article class="modal-gallery">
+          <img class="modal-gallery-close" src="./images/icon-close.svg" alt="Close">
+          <div class="modal-gallery__image-container">
+            <img class="modal-gallery__previus" src="./images/icon-previous.svg" alt="Anterior">
+            <img class="modal-gallery__next" src="./images/icon-next.svg" alt="Siguiente">
+          </div>
+          <div class="galley_thumnails">
+            <img id="m1" class="modal-gallery_thumnail" src="./images/image-product-1-thumbnail.jpg" alt="preview 1">
+            <img id="m2" class="modal-gallery_thumnail" src="./images/image-product-2-thumbnail.jpg" alt="preview 1">
+            <img id="m3" class="modal-gallery_thumnail" src="./images/image-product-3-thumbnail.jpg" alt="preview 1">
+            <img id="m4" class="modal-gallery_thumnail" src="./images/image-product-4-thumbnail.jpg" alt="preview 1">
+          </div>
+        </article>
+      </div>
+
+  </main>
+
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://www.linkedin.com/in/gaston-skamlec-8bb339201/" target="_blank">Carlos Gaston Lucero Skamlec</a>.
   </div>
 </body>
 </html>
