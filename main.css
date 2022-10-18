@@ -1,3 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 16px;
+}
+
+.header {
+  border: 1px solid red;
+}
+
+.navbar {
+  display: none;
+}
+
+.modal-navbar__background {
+  display: none;
+}
+
+.main-container {
+  width: 23.43em;
+  border: 1px solid black;
+  margin: auto;
+}
+@media (min-width: 69.6875em) {
+  .main-container {
+    width: 69.6875em;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */

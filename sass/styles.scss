@@ -1,0 +1,25 @@
+@use 'initial'; //ESTILOS INICIALES DEL BODY Y TODOS LOS ELEMENTOS//
+@use 'variables'; //VARIABLES//
+@use 'header'; //HEADER//
+@use 'navbar'; //BARRA DE NAVEGACION//
+@use 'modal-navbar'; //BARRA DE NAVEGACION MODAL//
+
+
+.main-container{
+    width: 23.43em;
+    border: 1px solid black;
+    margin: auto;
+    @media(min-width:69.6875em){
+            width: 69.6875em;   
+    }
+}
+
+
+
+
+
+
+
+
+
+ 
