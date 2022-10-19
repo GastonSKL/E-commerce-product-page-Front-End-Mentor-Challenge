@@ -1,6 +1,6 @@
 @use 'initial'; //ESTILOS INICIALES DEL BODY Y TODOS LOS ELEMENTOS//
-@use 'variables'; //VARIABLES//
 @use 'header'; //HEADER//
+@use 'variables'; //VARIABLES//
 @use 'navbar'; //BARRA DE NAVEGACION//
 @use 'modal-navbar'; //BARRA DE NAVEGACION MODAL//
 
@@ -10,7 +10,8 @@
     border: 1px solid black;
     margin: auto;
     @media(min-width:69.6875em){
-            width: 69.6875em;   
+            width: 69.6875em;  
+            
     }
 }
 
