@@ -1,0 +1,124 @@
+@use 'mixins' as m;
+
+.details{
+    padding:1.4em;
+    &__company{
+        color: hsl(26, 100%, 55%);
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold;
+        letter-spacing: 2px;
+        margin-bottom: .8em;
+    }
+    &__title{
+        font-size: 1.7em;
+        font-weight: 700;
+        margin-bottom: .8em;
+    }
+    &__decription{
+        color: hsl(219, 9%, 45%);
+        word-spacing: 1px;
+        line-height: 1.4em;
+        margin-bottom: 1.4em;
+    }
+    &__prices{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 1.4em;
+    }
+    &__now{
+        font-size: 1.4em;
+        font-weight: 700;
+        display: flex;
+        align-items: center;   
+    }
+    &__discount{
+        font-size: .7em;
+        margin-left: 1em;
+        background-color: hsl(25, 100%, 94%);
+        color: hsl(26, 100%, 55%);
+    }
+    &__before{
+        color: hsl(220, 14%, 75%);
+        font-weight: 700;
+        text-decoration: line-through;
+    }
+    &__product-quantity{
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+    &__input{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        &-number{
+            border: none;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1em;
+            &:focus{
+                outline: none;
+            }
+        }
+        &-minus:hover{
+            cursor: pointer;
+        }
+        &-plus:hover{
+            cursor: pointer;
+        }
+    }
+    &__button{
+        height: 4em;
+        border-radius: .9em;
+        border: none;
+        background-color: hsl(26, 100%, 55%);
+        color: white;
+        font-weight: 700;
+        font-size: 1em;
+        padding-left: .5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .6em;
+         &:hover{
+            cursor: pointer;
+            opacity: .5;
+         }
+    }
+    @media(min-width:69.6875em){
+        padding-top: 3.7em;
+        width: 27.875;
+        &__title{
+            font-size: 2.7em;
+            margin-bottom: 1em;
+        }
+        &__decription{
+            font-size:1.1em;
+        }
+        &__prices{
+            flex-direction: column;
+            align-items: baseline;
+            gap: 1em;
+            margin-left: .5em;
+        }
+        &__product-quantity{
+            flex-direction: row;
+            gap: 2em;
+            
+        }
+        &__input{
+           width: 40%;
+           margin-left:1.2em;
+           
+        }
+        &__button{
+            width: 60%;
+            margin-left: 1.2em;
+        }
+        
+}
+}

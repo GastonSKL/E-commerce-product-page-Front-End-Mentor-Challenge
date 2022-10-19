@@ -1,22 +1,68 @@
-
+@use 'mixins';
 
 .gallery{
     &__image-container{
-        position: relative;
-        width: 18.75em;
-        margin: auto;
-        border: 1px solid black;
-        &-img{
-            width: 100%;
-            position: absolute;
-
-        }
-        &-icons{
-            position: absolute;
-            top: 8em;
+        background-image: url(images/image-product-1.jpg);
+        height: 18.75em;
+        width: 100%;
+        background-size: cover;
+        background-position-y: -2em;
+        &:hover{
+            cursor: pointer;
         }
     }
+    &__previus{
+        @include mixins.image-btn;
+        top: 11.1em;
+        left:1em;   
+        @media(min-width:69.6875em){
+            display: none;
+        }   
+    }
+    &__next{
+        @include mixins.image-btn;
+        top: 11.1em;
+        left: 20em;
+        @media(min-width:69.6875em){
+            display: none;
+        }
+    }
+
+    &__thumnails{
+        display: none;
+        
+        @media(min-width: 69.6875em){
+            height: 8em;
+            display: flex;
+            gap: 1em;
+            align-items: center;
+        }
+    }
+
+    &__thumnail{
+        width: 5.6em;
+        border-radius: .8em;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid hsl(26, 100%, 55%);
+            box-shadow: 3px 3px 10px;
+        }
+
+    }
+    
+    @media(min-width: 69.6875em){
+        width: 27.8em;
+        &__image-container{
+        border-radius: 1em;
+        width: 100%;
+        height: 25em;
+        background-position-y: 0;
+        
+
+    }
+        
+    }
 }
-.gallery__previus{
-    left: 6em;
-}
+
+
+

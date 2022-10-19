@@ -1,0 +1,74 @@
+@use 'mixins';
+
+.cart-modal{
+    display: none;
+    width: 22.5em;
+    height: 16.25em;
+    margin: auto;
+    border-radius: .7em;
+    box-shadow: 3px 3px 10px;
+    position:absolute;
+    top:4.6em;
+    right: .4em;
+    background-color: white;
+    &__title{
+        font-weight: 700;
+        font-size: 1.2em;
+        padding: 1.2em;
+        border-bottom: 1px solid hsl(220, 14%, 75%);;
+    }
+    &__checkout-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    &__details-container{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 7em;
+        &-product{
+            height: 4em;
+            width: 4em;
+            border-radius: .6em;
+        }
+        
+    }
+    &__product{
+        font-size: .9em;
+        color: hsl(219, 9%, 45%);
+    }
+    &__price{
+        color: hsl(219, 9%, 45%);
+        font-size: .8em;
+        margin-top: .4em;
+        & span{
+            color: black;
+            font-weight: 700;
+        }
+    }
+    &__delete{
+        & img{
+            width: 1em;
+            height:1em;
+        }
+        &:hover{
+            cursor: pointer;
+        }
+    }
+    &__buy{
+        width: 85%;
+        margin: auto;
+        height: 3.5em ;
+        border-radius: .6em;
+        border: none;
+        background-color: hsl(26, 100%, 55%);
+        color: white;
+        font-weight: 700;
+        letter-spacing: 1px;
+        &:hover{
+            cursor: pointer;
+        }
+        
+    }
+}

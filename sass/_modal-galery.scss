@@ -1,0 +1,34 @@
+@use 'mixins' ;
+
+.modal-gallery{
+    width: 27.875em;
+    z-index: 1;
+    border: 1px solid red;
+    margin: 15vh auto;
+    &__background{
+        @include mixins.modal-background;
+    }
+    &__image-container{
+        background-image: url(images/image-product-1.jpg);
+        height: 27.875em;
+        background-size: cover;
+        border-radius: .7em;
+    }
+    &_thumnails{
+        height: 8em;
+        display: flex;
+        gap: 1em;
+        align-items: center;
+        justify-content: center;
+    }
+    &_thumnail{
+        width: 5.6em;
+        border-radius: .8em;
+        &:hover{
+            cursor: pointer;
+            border: 1px solid hsl(26, 100%, 55%);
+            box-shadow: 3px 3px 10px;
+        }
+    }
+
+}

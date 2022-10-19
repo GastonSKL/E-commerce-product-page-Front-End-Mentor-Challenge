@@ -4,16 +4,25 @@
 @use 'navbar'; //BARRA DE NAVEGACION//
 @use 'modal-navbar'; //BARRA DE NAVEGACION MODAL//
 @use 'gallery'; //GALERIA//
+@use 'details';
+@use 'modal-cart';
+@use 'modal-galery';
 
 
 .main-container{
     width: 23.43em;
-    border: 1px solid black;
     margin: auto;
     position: relative;
     @media(min-width:69.6875em){
             width: 69.6875em;  
             
+    }
+}
+.content{
+    @media(min-width:69.6875em){
+        display: flex;
+        padding:5.6em 3.1em;
+        gap: 7.7em;
     }
 }
 
