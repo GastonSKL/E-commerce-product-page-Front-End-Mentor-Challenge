@@ -1,0 +1,22 @@
+
+
+.gallery{
+    &__image-container{
+        position: relative;
+        width: 18.75em;
+        margin: auto;
+        border: 1px solid black;
+        &-img{
+            width: 100%;
+            position: absolute;
+
+        }
+        &-icons{
+            position: absolute;
+            top: 8em;
+        }
+    }
+}
+.gallery__previus{
+    left: 6em;
+}

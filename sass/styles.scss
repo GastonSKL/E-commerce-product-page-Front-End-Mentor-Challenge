@@ -3,12 +3,14 @@
 @use 'variables'; //VARIABLES//
 @use 'navbar'; //BARRA DE NAVEGACION//
 @use 'modal-navbar'; //BARRA DE NAVEGACION MODAL//
+@use 'gallery'; //GALERIA//
 
 
 .main-container{
     width: 23.43em;
     border: 1px solid black;
     margin: auto;
+    position: relative;
     @media(min-width:69.6875em){
             width: 69.6875em;  
             
