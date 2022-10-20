@@ -118,6 +118,9 @@
         &__button{
             width: 60%;
             margin-left: 1.2em;
+            &:active{
+                box-shadow: 3px 3px 10px black;
+            }
         }
         
 }
