@@ -11,6 +11,8 @@
     top:4.6em;
     right: .4em;
     background-color: white;
+    animation: aparecer 1000ms forwards;
+    
     &__title{
         font-weight: 700;
         font-size: 1.2em;
@@ -70,5 +72,14 @@
             cursor: pointer;
         }
         
+    }
+}
+
+@keyframes aparecer {
+    from{
+        opacity: 0;
+
+    }to{
+        opacity: .5em;
     }
 }

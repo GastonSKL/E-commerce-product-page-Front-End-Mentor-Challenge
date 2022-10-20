@@ -403,6 +403,7 @@ body {
   top: 4.6em;
   right: 0.4em;
   background-color: white;
+  animation: aparecer 1000ms forwards;
 }
 .cart-modal__title {
   font-weight: 700;
@@ -460,6 +461,14 @@ body {
   cursor: pointer;
 }
 
+@keyframes aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.5em;
+  }
+}
 .modal-gallery {
   width: 27.875em;
   z-index: 1;

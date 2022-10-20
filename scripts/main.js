@@ -65,4 +65,19 @@ botonPrincipalCarrito.addEventListener('click',()=>{
     }
 })
 
+//FUNCIONALIDAD AL CARRITO//
+
+const carritoModal = document.querySelector('.cart-modal');
+const botonCompra = document.querySelector('.cart-modal__buy');
+
+carrito.addEventListener('click',()=>{
+      carritoModal.style.display = 'block';
+
+})
+
+botonCompra.addEventListener('click',()=>{
+    carritoModal.style.display = 'none';
+});
+
+
 
