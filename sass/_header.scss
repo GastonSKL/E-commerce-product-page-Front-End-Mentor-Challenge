@@ -6,9 +6,13 @@
     justify-content: space-between;
     height: 4.25em;
     padding: 0 1.5em;
+    max-width: 1115px;
+    margin:auto;
     @media(min-width: 69.6875em){
         height: 7em;
         border-bottom: 1px solid hsl(220, 14%, 75%);
+        position: relative;
+        
     }
     &__navigation{
          width: 10.9375em;

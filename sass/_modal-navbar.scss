@@ -7,13 +7,30 @@
     width: 15.625em;
     height: 100%;
     padding: 1.75em 1.5em;
-    &__background{
-        @include mixins.modal-background;
+    @media(max-width: 1115px){
+        &__background{
+            @include mixins.modal-background;
+    }
+    
     }
     &__link{
         text-decoration: none;
         color: black;
         font-weight: 700;
+        &:after{
+            content: "";
+            position: absolute;
+            background-color: black;
+            height: 3px;
+            width: 0;
+            left: 0;
+            bottom: -10px;
+            transition: .3s;
+        }
+        &:hover:after{
+            width: 100%;
+            
+        }
     }
 }
 .modal-navbar__items{
