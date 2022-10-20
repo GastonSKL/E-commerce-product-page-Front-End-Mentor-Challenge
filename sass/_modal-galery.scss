@@ -1,9 +1,9 @@
 @use 'mixins' ;
 
 .modal-gallery{
+    
     width: 27.875em;
     z-index: 1;
-    border: 1px solid red;
     margin: 15vh auto;
     &__background{
         @include mixins.modal-background;
@@ -30,5 +30,26 @@
             box-shadow: 3px 3px 10px;
         }
     }
+
+   /* &__previus{
+        @include mixins.image-btn;
+        top: 24.1em;
+        left:21em;   
+        @media(max-width:69.6875em){
+            display: none;
+        }   
+    }
+    &__next{
+        @include mixins.image-btn;
+        top: 24.1em;
+        left: 45em;
+        @media(max-width:69.6875em){
+            display: none;
+        }
+    }*/
+    @media(max-width:69.6875em){
+        display: none;
+    }
+    
 
 }

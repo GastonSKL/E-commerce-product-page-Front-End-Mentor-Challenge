@@ -63,49 +63,43 @@
     </header>  
 
       <!--CONTENIDO(GALERIA Y DETALLES)-->
-      <section class="content">
-
-        <!--GALERIA-->
-        <article class="gallery">
-
-          <div class="gallery__image-container">
-                <img class="gallery__previus" src="./images/icon-previous.svg" alt="Anterior">
-                <img class="gallery__next" src="./images/icon-next.svg" alt="Siguiente">  
-          </div>
-
-          <div class="gallery__thumnails">
-
-            <img id="1" class="gallery__thumnail" src="./images/image-product-1-thumbnail.jpg" alt="preview 1">
-            <img id="2" class="gallery__thumnail" src="./images/image-product-2-thumbnail.jpg" alt="preview 1">
-            <img id="3" class="gallery__thumnail" src="./images/image-product-3-thumbnail.jpg" alt="preview 1">
-            <img id="4" class="gallery__thumnail" src="./images/image-product-4-thumbnail.jpg" alt="preview 1">            
-          </div>
+      
+        <div class="content__container">
+          <section class="content">
+            <!--GALERIA-->
+            <article class="gallery">
+              <div class="gallery__image-container">
+                    <img class="gallery__previus" src="./images/icon-previous.svg" alt="Anterior">
+                    <img class="gallery__next" src="./images/icon-next.svg" alt="Siguiente">
+              </div>
+              <div class="gallery__thumnails">
+                <img id="1" class="gallery__thumnail" src="./images/image-product-1-thumbnail.jpg" alt="preview 1">
+                <img id="2" class="gallery__thumnail" src="./images/image-product-2-thumbnail.jpg" alt="preview 1">
+                <img id="3" class="gallery__thumnail" src="./images/image-product-3-thumbnail.jpg" alt="preview 1">
+                <img id="4" class="gallery__thumnail" src="./images/image-product-4-thumbnail.jpg" alt="preview 1">
+              </div>
           
-        </article>
-
-        <!--DETALLES-->
-        <article class="details"> 
-          <h2 class="details__company">Sneaker Company</h2>
-          <h2 class="details__title">Fall Limited Edition Sneakers</h2>
-          <p class="details__decription">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
-          <div class="details__prices">
-            <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
-            <p class="details__before">$250.00</p>
-          </div>
-          <div class="details__product-quantity">
-            <div class="details__input">
-              <img class="details__input-minus"src="./images/icon-minus.svg" alt="Menos">
-              <input class="details__input-number" type="text" value="0">
-              <img class="details__input-plus"src="./images/icon-plus.svg" alt="Plus">
-            </div>
-            <button class="details__button"><img src="./images/icon-cart.svg" alt="Carrito">Add to cart</button>
-
-
-          </div>
-
-        </article>
-
-      </section>
+            </article>
+            <!--DETALLES-->
+            <article class="details">
+              <h2 class="details__company">Sneaker Company</h2>
+              <h2 class="details__title">Fall Limited Edition Sneakers</h2>
+              <p class="details__decription">These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+              <div class="details__prices">
+                <p class="details__now">$125.00 <span class="details__discount">50%</span></p>
+                <p class="details__before">$250.00</p>
+              </div>
+              <div class="details__product-quantity">
+                <div class="details__input">
+                  <img class="details__input-minus"src="./images/icon-minus.svg" alt="Menos">
+                  <input class="details__input-number" type="text" value="0">
+                  <img class="details__input-plus"src="./images/icon-plus.svg" alt="Plus">
+                </div>
+                <button class="details__button"><img src="./images/icon-cart.svg" alt="Carrito">Add to cart</button>
+              </div>
+            </article>
+          </section>
+        </div>
 
       <!--MODAL DE CARRITO-->
       <div class="cart-modal">
