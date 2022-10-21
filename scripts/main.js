@@ -83,21 +83,23 @@ botonCompra.addEventListener('click',()=>{
 
 //Galeria principal//
 
-const imagenMain = document.querySelector('.gallery__image-container');
-const modalBackground = document.querySelector('.modal-gallery__background');
-const botonCierre = document.querySelector('.modal-gallery__close');
-const imagenSmall = document.querySelector('.gallery__thumnail');
+const imagenMain = document.querySelector('.gallery__image-container'); //CONTENEDOR CON EL BACKGROUND_IMAGE
+const modalBackground = document.querySelector('.modal-gallery__background'); //GALERIA MODAL
+const botonCierre = document.querySelector('.modal-gallery__close'); //BOTON DE CIERRE DE GALERIA MODAL
+const imagenSmall = document.querySelector('.gallery__thumnail');  //THUMBNAILS PRINCIPALES
 const imagenSmall1 = document.querySelector('.gallery__thumnail-1');
 const imagenSmall2 = document.querySelector('.gallery__thumnail-2');
 const imagenSmall3 = document.querySelector('.gallery__thumnail-3');
 const imagenSmall4 = document.querySelector('.gallery__thumnail-4');
-const imagenSmallModal1 = document.querySelector('.modal-gallery_thumnail-1');
+const imagenSmallModal1 = document.querySelector('.modal-gallery_thumnail-1'); //THUMBNAILS MODALES
 const imagenSmallModal2 = document.querySelector('.modal-gallery_thumnail-2');
 const imagenSmallModal3 = document.querySelector('.modal-gallery_thumnail-3');
 const imagenSmallModal4 = document.querySelector('.modal-gallery_thumnail-4');
-const contenedorImagen = document.querySelector('.modal-gallery__image-container');
-const botonSiguiente = document.querySelector('.modal-gallery__next');
+const contenedorImagen = document.querySelector('.modal-gallery__image-container'); //CONTENEDOR CON EL BACKGROUND_IMAGE MODAL
+const botonSiguiente = document.querySelector('.modal-gallery__next'); //BOTONES DE SIGUIENTE Y ANTERIOR MODALES
 const botonAnterior = document.querySelector('.modal-gallery__previus');
+
+//EVENT LISTENERS PARA LA SELECCION DE IMAGENES
 
 imagenMain.addEventListener('click',()=>{
          modalBackground.style.display = 'block';
@@ -143,6 +145,8 @@ imagenSmallModal4.addEventListener('click',()=>{
     contenedorImagen.style.backgroundImage = 'url(images/image-product-4.jpg)'
 })
 
+//FUNCIONES PARA LOS EVENT LISTENERS DE LOS BOTONES DE SIGUIENTE Y ANTERIOR DEL MODAL GALLERY
+
 let contador = 1;
 const siguiente =()=>{
     if(contador == 1){
@@ -164,16 +168,16 @@ const siguiente =()=>{
 const anterior = () =>{
     if(contador == 1){
         contenedorImagen.style.backgroundImage = 'url(images/image-product-4.jpg)';
-        contador++;
+        contador= 4;
     }else if(contador == 2){
         contenedorImagen.style.backgroundImage = 'url(images/image-product-1.jpg)';
-        contador++;
+        contador--;
     }else if(contador == 3){
         contenedorImagen.style.backgroundImage = 'url(images/image-product-2.jpg)';
-        contador++;
+        contador--;
     }else if(contador == 4){
         contenedorImagen.style.backgroundImage = 'url(images/image-product-3.jpg)';
-        contador = 1;
+        contador --;
     }
     return contador;
 }
@@ -184,6 +188,32 @@ botonSiguiente.addEventListener('click',()=>{
 
 botonAnterior.addEventListener('click',()=>{
     anterior();
+})
+
+////////////////////////////////////////////////////////////
+
+//MODAL CHECKOUT//
+
+const precio = document.querySelector('.cart-modal__price');
+const precioTotal = document.querySelector('.cart-modal__price-price');
+
+const conversionStringInt = (string) =>{
+    numero = parseInt(string);
+    return numero;
+}
+
+
+let total = 0;
+
+
+
+carrito.addEventListener('click',()=>{
+    if(notification.innerHTML != "0"){
+        total = conversionStringInt(notification.innerHTML);
+        precioTotal.innerHTML = `${125 * botonPrincipalValor.value}`;
+        precio.innerHTML = `$125 x${botonPrincipalValor.value}`;
+    }
+
 })
 
 
