@@ -9,7 +9,7 @@
         @include mixins.modal-background;
     }
     &__image-container{
-        background-image: url(images/image-product-1.jpg);
+        background-image: url(images/image-product-1.jpg) ;
         height: 27.875em;
         background-size: cover;
         border-radius: .7em;
