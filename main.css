@@ -142,6 +142,7 @@ body {
   width: 15.625em;
   height: 100%;
   padding: 1.75em 1.5em;
+  animation: ltr 1000ms;
 }
 @media (max-width: 1115px) {
   .modal-navbar__background {
@@ -161,19 +162,6 @@ body {
   color: black;
   font-weight: 700;
 }
-.modal-navbar__link:after {
-  content: "";
-  position: absolute;
-  background-color: black;
-  height: 3px;
-  width: 0;
-  left: 0;
-  bottom: -10px;
-  transition: 0.3s;
-}
-.modal-navbar__link:hover:after {
-  width: 100%;
-}
 
 .modal-navbar__items {
   list-style: none;
@@ -189,6 +177,14 @@ body {
   cursor: pointer;
 }
 
+@keyframes ltr {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
 .gallery__image-container {
   background-image: url(images/image-product-1.jpg);
   height: 18.75em;
@@ -484,6 +480,11 @@ body {
   height: 100%;
   display: none;
   animation: aparecer 1000ms forwards;
+}
+@media (max-width: 69.6875em) {
+  .modal-gallery__background {
+    display: none;
+  }
 }
 .modal-gallery__image-container {
   background-image: url(images/image-product-1.jpg);

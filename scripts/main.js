@@ -98,12 +98,12 @@ const imagenSmallModal4 = document.querySelector('.modal-gallery_thumnail-4');
 const contenedorImagen = document.querySelector('.modal-gallery__image-container'); //CONTENEDOR CON EL BACKGROUND_IMAGE MODAL
 const botonSiguiente = document.querySelector('.modal-gallery__next'); //BOTONES DE SIGUIENTE Y ANTERIOR MODALES
 const botonAnterior = document.querySelector('.modal-gallery__previus');
+const botonAnteriorPrincipal = document.querySelector('.gallery__previus');
+const botonSiguientePrincipal = document.querySelector('.gallery__next');
 
 //EVENT LISTENERS PARA LA SELECCION DE IMAGENES
 
-imagenMain.addEventListener('click',()=>{
-         modalBackground.style.display = 'block';
-});
+         
 
 botonCierre.addEventListener('click',()=>{
     modalBackground.style.display = 'none';
@@ -190,6 +190,48 @@ botonAnterior.addEventListener('click',()=>{
     anterior();
 })
 
+const anterior1 = () =>{
+    if(contador == 1){
+        imagenMain.style.backgroundImage = 'url(images/image-product-4.jpg)';
+        contador= 4;
+    }else if(contador == 2){
+        imagenMain.style.backgroundImage = 'url(images/image-product-1.jpg)';
+        contador--;
+    }else if(contador == 3){
+        imagenMain.style.backgroundImage = 'url(images/image-product-2.jpg)';
+        contador--;
+    }else if(contador == 4){
+        imagenMain.style.backgroundImage = 'url(images/image-product-3.jpg)';
+        contador --;
+    }
+    return contador;
+}
+
+const siguiente1 =()=>{
+    if(contador == 1){
+        imagenMain.style.backgroundImage = 'url(images/image-product-2.jpg)';
+        contador++;
+    }else if(contador == 2){
+        imagenMain.style.backgroundImage = 'url(images/image-product-3.jpg)';
+        contador++;
+    }else if(contador == 3){
+        imagenMain.style.backgroundImage = 'url(images/image-product-4.jpg)';
+        contador++;
+    }else if(contador == 4){
+        imagenMain.style.backgroundImage = 'url(images/image-product-1.jpg)';
+        contador = 1;
+    }
+    return contador;
+}
+
+botonAnteriorPrincipal.addEventListener('click',()=>{
+    anterior1();
+})
+
+botonSiguientePrincipal.addEventListener('click',()=>{
+    siguiente1();
+})
+
 ////////////////////////////////////////////////////////////
 
 //MODAL CHECKOUT//
@@ -214,6 +256,26 @@ carrito.addEventListener('click',()=>{
         precio.innerHTML = `$125 x${botonPrincipalValor.value}`;
     }
 
+})
+
+
+/////////////////////////////////////////////////////////////////////////
+
+//MODAL NAVBAR//
+
+const botonCierreModal = document.querySelector('.modal-close');
+const modalNavbar = document.querySelector('.modal-navbar');
+const botonHamburguesa = document.querySelector('.header__menu');
+const modalNavBarBackground = document.querySelector('.modal-navbar__background');
+
+botonHamburguesa.addEventListener('click',()=>{
+    modalNavBarBackground.style.display = 'block';
+    modalNavbar.style.display = 'block';
+})
+
+botonCierreModal.addEventListener('click',()=>{
+    modalNavBarBackground.style.display = 'none';
+    modalNavbar.style.display = 'none';
 })
 
 

@@ -6,6 +6,9 @@
     z-index: 1;
     margin: 15vh auto;
     &__background{
+        @media(max-width:69.6875em){
+            display: none;
+        }  
         @include mixins.modal-background;
     }
     &__image-container{
